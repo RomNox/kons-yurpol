@@ -28,7 +28,7 @@ html, body {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
     color: transparent;
-    letter-spacing: 7px; /* Чуть большее расстояние между буквами */
+    letter-spacing: 7px;
     opacity: 0;
     white-space: nowrap;
     text-align: center;
@@ -71,8 +71,8 @@ html, body {
 /* Все тексты, кроме самого крупного — ЧУТЬ ЯРЧЕ */
 .text:not(:last-child) {
     -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.45); /* Чуть ярче серый */
-    opacity: 0.35;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.55);
+    opacity: 0.4;
 }
 
 /* Самый крупный текст — белый контур с черной заливкой */
@@ -83,7 +83,31 @@ html, body {
     opacity: 1;
 }
 
-/* Адаптация для МОБИЛЬНЫХ (текст сделан ЧУТЬ МЕНЬШЕ) */
+/* Глитч-эффект */
+@keyframes glitch {
+    0% { transform: translate(0); opacity: 1; }
+    10% { transform: translate(-2px, 2px) skewX(-5deg); opacity: 0.8; }
+    20% { transform: translate(2px, -2px) skewX(5deg); opacity: 1; }
+    30% { transform: translate(-3px, 3px) skewX(-3deg); opacity: 0.7; }
+    40% { transform: translate(3px, -3px) skewX(3deg); opacity: 1; }
+    50% { transform: translate(-1px, 1px) skewX(-2deg); opacity: 0.9; }
+    60% { transform: translate(2px, -2px) skewX(2deg); opacity: 0.6; }
+    70% { transform: translate(-3px, 3px) skewX(-3deg); opacity: 1; }
+    80% { transform: translate(3px, -3px) skewX(3deg); opacity: 0.5; }
+    90% { transform: translate(-1px, 1px) skewX(-2deg); opacity: 1; }
+    100% { transform: translate(0); opacity: 0.4; }
+}
+
+.glitch {
+    animation: glitch 0.1s infinite linear alternate;
+}
+
+/* Исчезновение текста после глитча */
+.hidden {
+    display: none;
+}
+
+/* Адаптация для МОБИЛЬНЫХ */
 @media (max-width: 768px) {
     .text:nth-child(30) { font-size: 70px; }
     .text:nth-child(29) { font-size: 65px; }
