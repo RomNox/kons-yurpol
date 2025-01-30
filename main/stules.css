@@ -1,0 +1,127 @@
+html, body {
+    background: black;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.text {
+    position: absolute;
+    font-weight: 700;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    opacity: 0;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+}
+
+/* Градиент прозрачности: серые буквы (стали темнее) */
+.text:nth-child(n):not(:last-child) {
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.5); /* Было 0.7, теперь темнее */
+}
+
+/* Самый крупный текст черный с белым контуром */
+.text:last-child {
+    color: black;
+    -webkit-text-stroke-color: white;
+}
+
+/* Размеры текста для десктопа */
+.text:nth-child(30) { font-size: 12vw; }
+.text:nth-child(29) { font-size: 11vw; }
+.text:nth-child(28) { font-size: 10vw; }
+.text:nth-child(27) { font-size: 9.5vw; }
+.text:nth-child(26) { font-size: 9vw; }
+.text:nth-child(25) { font-size: 8.5vw; }
+.text:nth-child(24) { font-size: 8vw; }
+.text:nth-child(23) { font-size: 7.5vw; }
+.text:nth-child(22) { font-size: 7vw; }
+.text:nth-child(21) { font-size: 6.8vw; }
+.text:nth-child(20) { font-size: 6.6vw; }
+.text:nth-child(19) { font-size: 6.4vw; }
+.text:nth-child(18) { font-size: 6.2vw; }
+.text:nth-child(17) { font-size: 6vw; }
+.text:nth-child(16) { font-size: 5.8vw; }
+.text:nth-child(15) { font-size: 5.6vw; }
+.text:nth-child(14) { font-size: 5.4vw; }
+.text:nth-child(13) { font-size: 5.2vw; }
+.text:nth-child(12) { font-size: 5vw; }
+.text:nth-child(11) { font-size: 4.8vw; }
+.text:nth-child(10) { font-size: 4.6vw; }
+.text:nth-child(9)  { font-size: 4.4vw; }
+.text:nth-child(8)  { font-size: 4.2vw; }
+.text:nth-child(7)  { font-size: 4vw; }
+.text:nth-child(6)  { font-size: 3.8vw; }
+.text:nth-child(5)  { font-size: 3.6vw; }
+.text:nth-child(4)  { font-size: 3.4vw; }
+.text:nth-child(3)  { font-size: 3.2vw; }
+.text:nth-child(2)  { font-size: 3vw; }
+.text:nth-child(1)  { font-size: 2.8vw; }
+
+/* Ограничение максимального размера на больших экранах */
+@media (min-width: 1920px) {
+    .text:nth-child(30) { font-size: 240px; }
+    .text:nth-child(29) { font-size: 220px; }
+    .text:nth-child(28) { font-size: 200px; }
+    .text:nth-child(27) { font-size: 190px; }
+    .text:nth-child(26) { font-size: 180px; }
+    .text:nth-child(25) { font-size: 170px; }
+    .text:nth-child(24) { font-size: 160px; }
+    .text:nth-child(23) { font-size: 150px; }
+    .text:nth-child(22) { font-size: 140px; }
+    .text:nth-child(21) { font-size: 130px; }
+    .text:nth-child(20) { font-size: 120px; }
+}
+
+/* Для мобильных устройств текст почти на всю ширину */
+@media (max-width: 768px) {
+    .text:nth-child(30) { font-size: 20vw; }
+    .text:nth-child(29) { font-size: 19vw; }
+    .text:nth-child(28) { font-size: 18vw; }
+    .text:nth-child(27) { font-size: 17vw; }
+    .text:nth-child(26) { font-size: 16vw; }
+    .text:nth-child(25) { font-size: 15vw; }
+    .text:nth-child(24) { font-size: 14vw; }
+    .text:nth-child(23) { font-size: 13vw; }
+    .text:nth-child(22) { font-size: 12vw; }
+    .text:nth-child(21) { font-size: 11vw; }
+    .text:nth-child(20) { font-size: 10vw; }
+    .text:nth-child(19) { font-size: 9vw; }
+    .text:nth-child(18) { font-size: 8.5vw; }
+    .text:nth-child(17) { font-size: 8vw; }
+    .text:nth-child(16) { font-size: 7.5vw; }
+    .text:nth-child(15) { font-size: 7vw; }
+    .text:nth-child(14) { font-size: 6.5vw; }
+    .text:nth-child(13) { font-size: 6vw; }
+    .text:nth-child(12) { font-size: 5.5vw; }
+    .text:nth-child(11) { font-size: 5vw; }
+    .text:nth-child(10) { font-size: 4.8vw; }
+    .text:nth-child(9)  { font-size: 4.6vw; }
+    .text:nth-child(8)  { font-size: 4.4vw; }
+    .text:nth-child(7)  { font-size: 4.2vw; }
+    .text:nth-child(6)  { font-size: 4vw; }
+    .text:nth-child(5)  { font-size: 3.8vw; }
+    .text:nth-child(4)  { font-size: 3.6vw; }
+    .text:nth-child(3)  { font-size: 3.4vw; }
+    .text:nth-child(2)  { font-size: 3.2vw; }
+    .text:nth-child(1)  { font-size: 3vw; }
+}
