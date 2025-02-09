@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Text</title>
-    <link rel="stylesheet" href="/main/stules.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Text</title>
+  <!-- Подключаем шрифт для второй анимации -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+  <!-- Подключаем внешний CSS файл -->
+  <link rel="stylesheet" href="stules.css">
 </head>
 <body>
+  <!-- Первая анимация (INURPOL) -->
+  <div id="wrapper">
+    <!-- 30 дублирующихся элементов с текстом INURPOL -->
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+    <div class="text">INURPOL</div>
+  </div>
 
-    <div id="wrapper">
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
-        <div class="text">INURPOL</div>
+  <!-- Вторая анимация (TextScramble) -->
+  <div id="scrambleContainer">
+    <div class="scrambleTextContainer">
+      <div id="line1" class="scrambleLine"></div>
+      <div id="line2" class="scrambleLine"></div>
+      <div id="line3" class="scrambleLine"></div>
     </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="/main/main.js"></script>
-
+  <!-- Подключение GSAP библиотеки -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Подключение внешнего JavaScript файла -->
+  <script src="main.js"></script>
 </body>
 </html>

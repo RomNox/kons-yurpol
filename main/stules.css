@@ -1,39 +1,39 @@
 /* Общие стили */
 html, body {
-    font-family: 'Noto Sans', sans-serif;
-    background: #000;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Noto Sans', sans-serif;
+  background: #000;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Контейнер */
 #wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Текстовые элементы */
 .text {
-    position: absolute;
-    font-weight: 700;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-    color: transparent;
-    letter-spacing: 7px;
-    opacity: 0;
-    white-space: nowrap;
-    text-align: center;
-    width: 100%;
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  position: absolute;
+  font-weight: 700;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+  letter-spacing: 7px;
+  opacity: 0;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 /* Увеличенный интервал между размерами текста */
@@ -58,85 +58,128 @@ html, body {
 .text:nth-child(12) { font-size: 30px; }
 .text:nth-child(11) { font-size: 27px; }
 .text:nth-child(10) { font-size: 24px; }
-.text:nth-child(9) { font-size: 21px; }
-.text:nth-child(8) { font-size: 18px; }
-.text:nth-child(7) { font-size: 15px; }
-.text:nth-child(6) { font-size: 12px; }
-.text:nth-child(5) { font-size: 10px; }
-.text:nth-child(4) { font-size: 8px; }
-.text:nth-child(3) { font-size: 6px; }
-.text:nth-child(2) { font-size: 4px; }
-.text:nth-child(1) { font-size: 2px; }
+.text:nth-child(9)  { font-size: 21px; }
+.text:nth-child(8)  { font-size: 18px; }
+.text:nth-child(7)  { font-size: 15px; }
+.text:nth-child(6)  { font-size: 12px; }
+.text:nth-child(5)  { font-size: 10px; }
+.text:nth-child(4)  { font-size: 8px; }
+.text:nth-child(3)  { font-size: 6px; }
+.text:nth-child(2)  { font-size: 4px; }
+.text:nth-child(1)  { font-size: 2px; }
 
-/* Все тексты, кроме самого крупного — ЧУТЬ ЯРЧЕ */
+/* Все тексты, кроме самого крупного — чуть ярче */
 .text:not(:last-child) {
-    -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.55);
-    opacity: 0.4;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.55);
+  opacity: 0.4;
 }
 
 /* Самый крупный текст — белый контур с черной заливкой */
 .text:last-child {
-    color: black;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-    opacity: 1;
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  opacity: 1;
 }
 
 /* Глитч-эффект */
 @keyframes glitch {
-    0% { transform: translate(0); opacity: 1; }
-    10% { transform: translate(-2px, 2px) skewX(-5deg); opacity: 0.8; }
-    20% { transform: translate(2px, -2px) skewX(5deg); opacity: 1; }
-    30% { transform: translate(-3px, 3px) skewX(-3deg); opacity: 0.7; }
-    40% { transform: translate(3px, -3px) skewX(3deg); opacity: 1; }
-    50% { transform: translate(-1px, 1px) skewX(-2deg); opacity: 0.9; }
-    60% { transform: translate(2px, -2px) skewX(2deg); opacity: 0.6; }
-    70% { transform: translate(-3px, 3px) skewX(-3deg); opacity: 1; }
-    80% { transform: translate(3px, -3px) skewX(3deg); opacity: 0.5; }
-    90% { transform: translate(-1px, 1px) skewX(-2deg); opacity: 1; }
-    100% { transform: translate(0); opacity: 0.4; }
+  0% { transform: translate(0); opacity: 1; }
+  10% { transform: translate(-2px, 2px) skewX(-5deg); opacity: 0.8; }
+  20% { transform: translate(2px, -2px) skewX(5deg); opacity: 1; }
+  30% { transform: translate(-3px, 3px) skewX(-3deg); opacity: 0.7; }
+  40% { transform: translate(3px, -3px) skewX(3deg); opacity: 1; }
+  50% { transform: translate(-1px, 1px) skewX(-2deg); opacity: 0.9; }
+  60% { transform: translate(2px, -2px) skewX(2deg); opacity: 0.6; }
+  70% { transform: translate(-3px, 3px) skewX(-3deg); opacity: 1; }
+  80% { transform: translate(3px, -3px) skewX(3deg); opacity: 0.5; }
+  90% { transform: translate(-1px, 1px) skewX(-2deg); opacity: 1; }
+  100% { transform: translate(0); opacity: 0.4; }
 }
 
 .glitch {
-    animation: glitch 0.1s infinite linear alternate;
+  animation: glitch 0.1s infinite linear alternate;
 }
 
-/* Исчезновение текста после глитча */
-.hidden {
-    display: none;
+/* Стили для второй анимации (TextScramble) */
+#scrambleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px; /* Добавляет отступы от краёв экрана */
 }
 
-/* Адаптация для МОБИЛЬНЫХ */
+.scrambleTextContainer {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px; /* Ограничивает ширину, чтобы текст не растягивался по всему экрану */
+    margin: 0 auto;   /* Центрирует контейнер внутри родительского элемента */
+}
+
+.scrambleLine {
+  color: #69a268;
+  margin: 1rem 0;
+  min-height: 1.5em;
+  line-height: 1.2;
+  font-size: 21px;
+}
+
+/* Мигающий символ */
+.blinking {
+  display: inline-block;
+  animation: blink 0.7s infinite alternate;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
-    .text:nth-child(30) { font-size: 70px; }
-    .text:nth-child(29) { font-size: 65px; }
-    .text:nth-child(28) { font-size: 60px; }
-    .text:nth-child(27) { font-size: 55px; }
-    .text:nth-child(26) { font-size: 50px; }
-    .text:nth-child(25) { font-size: 45px; }
-    .text:nth-child(24) { font-size: 40px; }
-    .text:nth-child(23) { font-size: 35px; }
-    .text:nth-child(22) { font-size: 30px; }
-    .text:nth-child(21) { font-size: 28px; }
-    .text:nth-child(20) { font-size: 26px; }
-    .text:nth-child(19) { font-size: 24px; }
-    .text:nth-child(18) { font-size: 22px; }
-    .text:nth-child(17) { font-size: 20px; }
-    .text:nth-child(16) { font-size: 18px; }
-    .text:nth-child(15) { font-size: 16px; }
-    .text:nth-child(14) { font-size: 14px; }
-    .text:nth-child(13) { font-size: 12px; }
-    .text:nth-child(12) { font-size: 10px; }
-    .text:nth-child(11) { font-size: 8px; }
-    .text:nth-child(10) { font-size: 7px; }
-    .text:nth-child(9) { font-size: 6px; }
-    .text:nth-child(8) { font-size: 5px; }
-    .text:nth-child(7) { font-size: 4px; }
-    .text:nth-child(6) { font-size: 3px; }
-    .text:nth-child(5) { font-size: 2px; }
-    .text:nth-child(4) { font-size: 1px; }
-    .text:nth-child(3) { font-size: 0.5px; }
-    .text:nth-child(2) { font-size: 0.3px; }
-    .text:nth-child(1) { font-size: 0px; }
+  .text:nth-child(30) { font-size: 70px; }
+  .text:nth-child(29) { font-size: 65px; }
+  .text:nth-child(28) { font-size: 60px; }
+  .text:nth-child(27) { font-size: 55px; }
+  .text:nth-child(26) { font-size: 50px; }
+  .text:nth-child(25) { font-size: 45px; }
+  .text:nth-child(24) { font-size: 40px; }
+  .text:nth-child(23) { font-size: 35px; }
+  .text:nth-child(22) { font-size: 30px; }
+  .text:nth-child(21) { font-size: 28px; }
+  .text:nth-child(20) { font-size: 26px; }
+  .text:nth-child(19) { font-size: 24px; }
+  .text:nth-child(18) { font-size: 22px; }
+  .text:nth-child(17) { font-size: 20px; }
+  .text:nth-child(16) { font-size: 18px; }
+  .text:nth-child(15) { font-size: 16px; }
+  .text:nth-child(14) { font-size: 14px; }
+  .text:nth-child(13) { font-size: 12px; }
+  .text:nth-child(12) { font-size: 10px; }
+  .text:nth-child(11) { font-size: 8px; }
+  .text:nth-child(10) { font-size: 7px; }
+  .text:nth-child(9) { font-size: 6px; }
+  .text:nth-child(8) { font-size: 5px; }
+  .text:nth-child(7) { font-size: 4px; }
+  .text:nth-child(6) { font-size: 3px; }
+  .text:nth-child(5) { font-size: 2px; }
+  .text:nth-child(4) { font-size: 1px; }
+  .text:nth-child(3) { font-size: 0.5px; }
+  .text:nth-child(2) { font-size: 0.3px; }
+  .text:nth-child(1) { font-size: 0px; }
 }
